@@ -1,0 +1,31 @@
+{
+
+    "HOMEPAGE": {
+        "home":"Home",
+        "welcome":"Hệ thống Admin"
+
+        },
+    "login": {
+        "login": "Đăng nhập",
+        "username": "Tên đăng nhập",
+        "password": "Mật khẩu",
+        "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
+    },
+    "menu": {
+        "system": {
+            "header": "Hệ thống",
+            "system-useristrator": {
+                "header": "Quản trị hệ thống",
+                "user-manage": "Quản lý người sử dụng"
+            },
+            "system-parameter": {
+                "header": "Tham số hệ thống"
+            }
+        },
+        "admin":{
+            "manage-user":"Quản lý người dùng",
+            "manage-food":"quản lý món ăn",
+            "manage-customer":"Quản lý người dùng"
+        }
+    }
+}

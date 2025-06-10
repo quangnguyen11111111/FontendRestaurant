@@ -1,0 +1,205 @@
+@import "../../HomePage/style/styles.scss";
+
+/* ================== SEARCH BOX ================== */
+.search-box {
+  position: fixed;
+  top: -41px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #fff;
+  width: 100%;
+  
+  &.active {
+    top: 41px;
+    box-shadow: 2px 2px 10px 4px rgba(14, 55, 54, 0.15);
+    transition: 0.2s all linear;
+  }
+
+  input {
+    padding: 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #bc9667;
+
+    &::placeholder {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+/* ================== HEADER ================== */
+.header {
+  margin-top: 30px;
+
+  .header-icon {
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+}
+
+.all_table{
+    /* ================== TABLE ================== */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: auto; /* Độ rộng của ô tự động theo nội dung */
+        z-index: 1000;
+    
+        th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          font-size: 18px;
+          text-align: center; /* Căn giữa nội dung theo chiều ngang */
+          vertical-align: middle; /* Căn giữa nội dung theo chiều dọc */
+          word-wrap: break-word; /* Ngắt từ nếu quá dài */
+        }
+    
+        td {
+          max-width: 10px;
+          max-height: calc(1.2em * 2); /* Chiều cao tối đa bằng 2 dòng chữ */
+          overflow-y: auto; /* Bật cuộn dọc */
+          line-height: 1.2em; /* Chiều cao mỗi dòng */
+          
+          .fas{
+            font-size: 20px;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.5);
+              transition: transform 0.5s ease;
+            }
+          }
+          img {
+            max-width: 150px;
+            width: 100%;
+            height: 110px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+    
+            &:hover {
+              transform: scale(1.1);
+              transition: transform 0.5s ease;
+            }
+          }
+        }
+    
+        th {
+          background-color: #f4f4f4;
+        }
+    
+        td::-webkit-scrollbar {
+          width: 5px;
+        }
+    
+        td::-webkit-scrollbar-thumb {
+          background: #aaa;
+          border-radius: 5px;
+        }
+      }
+      
+  
+  /* ================== PAGINATION ================== */
+  .pagination {
+    align-items: center;
+    justify-content: center;
+
+  
+    .next_page {
+      display: flex;
+      gap: 13px;
+      cursor: pointer;
+  
+      .btn_ {
+        padding: 5px 10px;
+        height: 36px;
+        border: none;
+        width: 37px;
+      }
+  
+      .btn_primary {
+        color: $red-r;
+      }
+    }
+  }
+}
+
+/* ================== ICON ================== */
+.circle_icon {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  transition: 0.2s all linear;
+  p{
+    font-size: 18px;
+    
+  }
+  p:hover{
+    color: #3404f3;
+    text-decoration: underline;
+  }
+  .fas{
+    color: #aaa;
+    &:hover {
+        transform: scale(1.5);
+        transition: transform 0.5s ease;
+      }
+  }
+   .red{
+    color: $red-r;
+  }
+  .green{
+    color: rgb(0, 255, 153);
+  }
+}
+.filter-status{
+  select{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+}
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25em solid transparent;
+  border-top: 0.25em solid #007bff;
+  border-radius: 50%;
+  animation: spinner-border 1s linear infinite;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.system-list{
+  margin-top: 30px;
+}
+.all_table{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  th, td {
+    border: 1px solid #ddd;
+    font-size: 14px!important;
+  }
+
+}
+.ma{
+  max-width: 125px!important;
+}

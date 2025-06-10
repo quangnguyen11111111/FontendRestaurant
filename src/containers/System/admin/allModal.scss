@@ -1,0 +1,60 @@
+.form-control{
+    &:focus{
+        color: var(--bs-body-color);
+        background-color: var(--bs-body-bg);
+        border-color: #fe8686;
+        outline: 0;
+        box-shadow: 0 0 0 .25rem rgba(234, 8, 30, 0.25);
+    }
+   
+}
+img {
+    object-fit: contain;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.5s ease;
+      
+    }
+  }
+
+
+.d-flex{
+    align-items: center;
+    justify-content: space-around;
+    .btn_down_image{
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        background-color: rgb(207, 31, 31);
+        &:hover{
+            background-color: rgb(207, 31, 31);
+            opacity: 0.9;
+        }
+    }
+    .fix_image{
+        width: 150px;
+        height: 150px;
+        .block_image{
+            max-width: 150px;
+            width: 100%;
+        }
+    }
+    
+}
+.color_1{
+    background-color: #898989;
+    border: none;
+    &:hover{
+        background-color: #898989;
+        opacity: 0.8;
+    }
+}
+.d_flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

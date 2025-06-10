@@ -1,0 +1,129 @@
+@import "../HomePage/style/styles.scss";
+.modal{
+  --bs-modal-margin:0.5rem !important;
+}
+.login-modal {
+  .login-container,
+  .user-info {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    .edit_cus{
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      &:hover{
+        color: #d28a00;
+      }
+    }
+  }
+
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f2a900;
+  }
+  .flex-row{
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    align-items: baseline;
+  }
+  .form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    input {
+      width: 100%;
+      border: 1px solid $text-r-color;
+      border-radius: 0.5rem;
+      padding: 0.8rem 2rem 0.8rem 1rem;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.3s all ease-in-out;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        border-color: $yellow-r-color;
+      }
+
+      &:not(:placeholder-shown) + label,
+      &:focus + label {
+        top: -10px;
+        left: 10px;
+        font-size: 0.85rem;
+        color: $yellow-r-color;
+        padding: 0 5px;
+      }
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: $text-r-color;
+      transition: 0.3s all ease-in-out;
+      pointer-events: none;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      color: $text-r-color;
+      &.click{
+        cursor: pointer;
+      }
+      z-index: 2; /* Đảm bảo luôn nằm trên input */
+    }
+    
+  }
+
+  .edit_flex{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+    &:hover{
+      color: #d28a00;
+    }
+  }
+
+  .btn-login {
+    border: none;
+    padding: 10px;
+    background-color: $red-r;
+    border-radius: 15px;
+    width: 30%;
+    font-size: 24px;
+    font-weight: 500;
+
+    &:hover {
+      background: #d28a00;
+    }
+  }
+  .register{
+    span{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    :hover {
+      color: #d28a00;
+    }
+  }
+  .welcome-text {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}

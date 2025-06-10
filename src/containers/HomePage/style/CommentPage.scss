@@ -1,0 +1,121 @@
+@import './styles.scss';
+
+// Định nghĩa màu sắc sử dụng trong toàn bộ file
+$primary-color: #A72E1B;
+$secondary-color: #888;
+$hover-color: #fc3;
+$button-color: #a33;
+$button-hover-color: #922;
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 15px;
+height: 100%;
+.prev{
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: 150px;
+}
+.item{
+    border: 1px solid $primary-color;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 
+    0 4px 6px $box-shadow-color,  /* Bóng mờ chính */
+    0 1px 3px $highlight-color,  /* Ánh sáng mềm */
+    inset 0 0 10px rgba(255, 255, 255, 0.2); /* Hiệu ứng sáng từ bên trong */
+  transition: box-shadow 0.3s ease-in-out;
+}
+  .container {
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    border: 1px solid $primary-color;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    .a1{
+        text-align: center;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+
+
+    }
+
+    .order-details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      border-bottom: 1px solid $primary-color;
+
+      p {
+        font-size: 0.9em;
+        color: #333;
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      h4 {
+        margin: 0;
+        font-size: 1em;
+        color: #333;
+      }
+
+      span {
+        font-size: 1.5em;
+        color: $secondary-color;
+        cursor: pointer;
+
+        &.active {
+          color: $hover-color;
+        }
+      }
+    }
+
+    textarea {
+      width: 97%;
+      padding: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 4px;
+      resize: none;
+      font-size: 0.9em;
+    }
+
+    button {
+      background-color: $button-color;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      display: block;
+      margin-top: 15px;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+  }
+}

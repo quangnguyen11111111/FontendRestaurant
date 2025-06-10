@@ -1,0 +1,47 @@
+@import "../styles/common.scss";
+
+.navigator-menu {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none; // Loại bỏ &.list-unstyled vì không còn cần thiết
+
+    .menu {
+        position: relative;
+        padding: 0 15px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        text-transform: none;
+        border-right: 1px solid $border;
+        &.active{
+            .menu-link{color: $colormain;}
+            
+        }
+        &:first-child {
+            border-left: 1px solid $border;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: darken($bg-menu-color, 3);
+            color: #94908e;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: white;
+            opacity: 0.9;
+            font-weight: 300;
+            &:hover {
+                color: $colormain;
+            }
+
+            &.active {
+                font-weight: 500;
+                color: $colormain;
+            }
+        }
+    }
+}
